@@ -2,7 +2,14 @@ import type { LinksFunction } from '@remix-run/node'
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
 import styles from './style.css'
 
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
+export const links: LinksFunction = () => [
+  {
+    rel: 'icon',
+    href: '/favicon.svg',
+    type: 'image/svg',
+  },
+  { rel: 'stylesheet', href: styles },
+]
 
 export default function App() {
   return (
@@ -13,7 +20,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-neutral-900 text-white antialiased min-h-screen">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
