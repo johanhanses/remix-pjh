@@ -1,5 +1,6 @@
 import type { LinksFunction } from '@remix-run/node'
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import { Analytics } from '@vercel/analytics/react'
 import styles from './style.css'
 
 export const links: LinksFunction = () => [
@@ -21,6 +22,7 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-neutral-900 text-white antialiased min-h-screen">
+        <Analytics />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
