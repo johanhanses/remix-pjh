@@ -28,7 +28,7 @@ export const Contact = () => (
         title={link.title}
         target="_blank"
         rel="noreferrer"
-        className="hover:text-gray-300 transition-colors duration-200"
+        className="hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200"
       >
         {link.icon}
       </Link>
