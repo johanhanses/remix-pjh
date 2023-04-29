@@ -1,7 +1,6 @@
 import type { LinksFunction, V2_MetaFunction } from '@remix-run/node'
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
 import { Analytics } from '@vercel/analytics/react'
-import { Header } from './components/header'
 import { Layout } from './components/layout'
 import { ThemeProvider, useTheme } from './components/theme-provider'
 import styles from './style.css'
@@ -41,7 +40,6 @@ const App = () => {
       <body className="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white antialiased min-h-screen">
         <Analytics />
         <Layout>
-          <Header />
           <Outlet />
         </Layout>
         <ScrollRestoration />

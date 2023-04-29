@@ -1,12 +1,12 @@
 import { Contact } from '~/components/contact'
 
+const name = 'Johan Hanses'
+
 export default function Index() {
   return (
-    <main className="min-h-screen flex pt-48 md:pt-0 md:items-center justify-end">
-      <div>
-        <h1 className="text-4xl mb-6">Johan Hanses</h1>
-        <Contact />
-      </div>
-    </main>
+    <div>
+      <h1 className="text-4xl mb-6">{name}</h1>
+      <Contact />
+    </div>
   )
 }
