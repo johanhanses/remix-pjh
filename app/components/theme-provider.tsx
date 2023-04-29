@@ -7,7 +7,7 @@ type ThemeContextType = [Theme | null, Dispatch<SetStateAction<Theme | null>>]
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme | null>(null)
+  const [theme, setTheme] = useState<Theme | null>('dark')
 
   useEffect(() => {
     const preferedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
